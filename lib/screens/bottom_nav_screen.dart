@@ -1,6 +1,7 @@
 import 'package:feather_icons/feather_icons.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_tiktok_clone/screens/home_screen/for_you_view.dart';
+import 'package:flutter_tiktok_clone/screens/add_video_screen/add_video_screen.dart';
+import 'package:flutter_tiktok_clone/screens/home_screen/home_view.dart';
 
 class BottomNavigationBarScreen extends StatefulWidget {
   const BottomNavigationBarScreen({Key? key}) : super(key: key);
@@ -18,49 +19,14 @@ class _BottomNavigationBarScreenState extends State<BottomNavigationBarScreen> {
       label: 'Home',
     ),
     const BottomNavigationBarItem(
-      icon: Icon(
-        FeatherIcons.search,
-      ),
-      label: 'Search',
-    ),
-    const BottomNavigationBarItem(
       icon: Icon(FeatherIcons.plus),
       label: 'Add',
-    ),
-    const BottomNavigationBarItem(
-      icon: Icon(FeatherIcons.messageCircle),
-      label: 'Chat',
-    ),
-    const BottomNavigationBarItem(
-      icon: Icon(
-        FeatherIcons.user,
-      ),
-      label: 'Profile',
     ),
   ];
 
   List<Widget> screens = [
     const HomeView(),
-    const Scaffold(
-      body: Center(
-        child: Text('Search'),
-      ),
-    ),
-    const Scaffold(
-      body: Center(
-        child: Text('Add'),
-      ),
-    ),
-    const Scaffold(
-      body: Center(
-        child: Text('Chat'),
-      ),
-    ),
-    const Scaffold(
-      body: Center(
-        child: Text('Profile'),
-      ),
-    ),
+    const AddVideoScreen(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -69,7 +35,7 @@ class _BottomNavigationBarScreenState extends State<BottomNavigationBarScreen> {
       bottomNavigationBar: BottomNavigationBar(
         showSelectedLabels: false,
         showUnselectedLabels: false,
-        backgroundColor: Colors.black45.withOpacity(0.5),
+        backgroundColor: Colors.black.withOpacity(0.8),
         fixedColor: Colors.white,
         elevation: 0,
         type: BottomNavigationBarType.fixed,
