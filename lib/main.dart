@@ -1,9 +1,17 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_tiktok_clone/screens/bottom_nav_screen.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
-void main() {
+Future<void> main() async {
+  await _init();
+  runApp(const MyApp());
+}
+
+Future<void> _init() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   ResponsiveSizingConfig.instance.setCustomBreakpoints(
     const ScreenBreakpoints(
       desktop: 860,
@@ -11,8 +19,13 @@ void main() {
       watch: 320, //small
     ),
   );
-
-  runApp(const MyApp());
+  EasyLoading.instance
+    ..indicatorType = EasyLoadingIndicatorType.fadingCircle
+    ..loadingStyle = EasyLoadingStyle.light
+    ..indicatorSize = 45.0
+    ..radius = 5
+    ..maskType = EasyLoadingMaskType.black
+    ..dismissOnTap = false;
 }
 
 class MyApp extends StatelessWidget {
@@ -24,6 +37,7 @@ class MyApp extends StatelessWidget {
       showSemanticsDebugger: false,
       debugShowCheckedModeBanner: false,
       theme: _theme,
+      builder: EasyLoading.init(),
       home: const BottomNavigationBarScreen(),
     );
   }

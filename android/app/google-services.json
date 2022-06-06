@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "120737705762",
+    "project_id": "flutter-video-player-76dfe",
+    "storage_bucket": "flutter-video-player-76dfe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:120737705762:android:a68925a02e14ef015c7f7b",
+        "android_client_info": {
+          "package_name": "com.flutter_video_player"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "120737705762-5h4ei45fqjrnhj8m6k417pgtiukv6g7k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLb71QGR464-6QVpaOr9zdgUAI_974mPM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "120737705762-5h4ei45fqjrnhj8m6k417pgtiukv6g7k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

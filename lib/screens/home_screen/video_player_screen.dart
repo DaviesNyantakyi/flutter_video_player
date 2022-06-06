@@ -93,8 +93,10 @@ class _MobileView extends StatelessWidget {
 
 class _TabletView extends StatelessWidget {
   final VideoPlayerController videoPlayerController;
-  const _TabletView({Key? key, required this.videoPlayerController})
-      : super(key: key);
+  const _TabletView({
+    Key? key,
+    required this.videoPlayerController,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
