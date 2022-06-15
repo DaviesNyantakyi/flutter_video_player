@@ -1,4 +1,4 @@
-# flutter_tiktok_clone
+# Flutter video player
 
 A new Flutter project.
 
